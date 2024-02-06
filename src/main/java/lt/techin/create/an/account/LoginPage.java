@@ -9,19 +9,18 @@ public class LoginPage extends AccountPage {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
-
-    @FindBy(css = "#email")
+    @FindBy(css = "input#email")
     WebElement logEmail;
 
     @FindBy(css = "#password")
     WebElement logPasswrd;
 
     public void logEnterEmail() {
-        act.sendKeys(logEmail, "rugilka@google.com");
+        logEmail.sendKeys("rugilka@google.com");
     }
 
     public void logEnterPassward(){
-        act.sendKeys(logPasswrd, "rugilka123");
+        logPasswrd.sendKeys( "rugilka123");
     }
 
     @FindBy(css = ".btn.btn-lg.btn-primary.d-block.w-100")
